@@ -219,9 +219,9 @@ export default function ResultsPage() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button href="/program" variant="primary">Explore Program Details</Button>
-                <Button href="/products" variant="outline" className="border-brand-neutral-700 text-white hover:bg-brand-neutral-800">View All Products</Button>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
+                <Button href="https://lornettedaye.com" variant="primary">Work with Coach Lornette ↗</Button>
+                <Button href="/products" variant="outline" className="border-brand-neutral-700 text-white hover:bg-brand-neutral-800">View All Digital Tools</Button>
               </div>
             </div>
           </div>
