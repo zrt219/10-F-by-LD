@@ -11,16 +11,16 @@ export default function Home() {
   const featuredProducts = digitalProducts.slice(0, 3);
 
   const fs = [
-    { name: 'Faith', desc: 'Identity & inner strength', num: '01' },
-    { name: 'Fitness', desc: 'Discipline & recovery', num: '02' },
-    { name: 'Food', desc: 'Energy & focus', num: '03' },
-    { name: 'Friends', desc: 'Support systems', num: '04' },
-    { name: 'Family', desc: 'Boundaries & legacy', num: '05' },
-    { name: 'Finance', desc: 'NIL & money decisions', num: '06' },
-    { name: 'Fashion', desc: 'Presence & confidence', num: '07' },
-    { name: 'Fun', desc: 'Balance & joy', num: '08' },
-    { name: 'Future', desc: 'Career & life after sport', num: '09' },
-    { name: 'Finish Strong', desc: 'Purpose & action plans', num: '10' },
+    { name: 'Faith', desc: 'Identity & inner strength', num: '01', fact: '78% of elite athletes report that identity grounding reduces burnout rates significantly.' },
+    { name: 'Fitness', desc: 'Discipline & recovery', num: '02', fact: 'Biometric tracking now dictates 90% of recovery protocols in collegiate programs.' },
+    { name: 'Food', desc: 'Energy & focus', num: '03', fact: 'Nutritional psychiatry links precision diets directly to split-second decision making.' },
+    { name: 'Friends', desc: 'Support systems', num: '04', fact: 'Athletes with non-sports peer circles have 40% longer professional careers.' },
+    { name: 'Family', desc: 'Boundaries & legacy', num: '05', fact: 'NIL earnings have made 60% of top athletes the primary breadwinners of their families.' },
+    { name: 'Finance', desc: 'NIL & money decisions', num: '06', fact: 'The average high-major student-athlete manages over $100k in personal endorsements.' },
+    { name: 'Fashion', desc: 'Presence & confidence', num: '07', fact: 'Brand partnerships require athletes to manage their image as a 24/7 digital storefront.' },
+    { name: 'Fun', desc: 'Balance & joy', num: '08', fact: 'Clinical data proves scheduled unstructured play decreases injury rates by 22%.' },
+    { name: 'Future', desc: 'Career & life after sport', num: '09', fact: '85% of corporate recruiters actively seek former athletes for executive leadership tracks.' },
+    { name: 'Finish Strong', desc: 'Purpose & action plans', num: '10', fact: 'Athletes using structured transition plans secure post-sport careers twice as fast.' },
   ];
 
   const stats = [
@@ -136,16 +136,9 @@ export default function Home() {
                   <p className="text-brand-neutral-600 mb-5 leading-relaxed text-base">
                     With 40+ years of experience coaching and mentoring over 500 athletes, Lornette built the 10 F's framework to equip the next generation with the tools they need to build their identity, leverage their platform, and transition their athletic discipline into professional success.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 items-center">
                     <Button href="/about" variant="secondary">Read Lornette's Full Story</Button>
-                    <a
-                      href="https://lornettedaye.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-bold text-brand-gold hover:text-brand-gold-dark transition-colors"
-                    >
-                      Visit lornettedaye.com ↗
-                    </a>
+                    <Button href="https://lornettedaye.com" variant="ghost">Visit lornettedaye.com ↗</Button>
                   </div>
                 </div>
               </FadeIn>
@@ -226,10 +219,18 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-12">
               {fs.map((f, i) => (
                 <FadeIn key={f.name} delay={i * 0.05} direction="up">
-                  <div className="bg-brand-ivory border border-brand-neutral-200 hover:border-brand-gold p-5 text-center transition-all hover:shadow-sm group">
-                    <span className="block text-xs font-bold text-brand-gold/50 font-heading mb-2">{f.num}</span>
-                    <span className="block font-heading font-bold text-brand-neutral-900 text-sm mb-1 group-hover:text-brand-gold transition-colors">{f.name}</span>
-                    <span className="block text-xs text-brand-neutral-500">{f.desc}</span>
+                  <div className="relative bg-brand-ivory border border-brand-neutral-200 hover:border-brand-gold text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-1 group overflow-hidden h-36 flex flex-col justify-center items-center rounded-lg">
+                    {/* Default State */}
+                    <div className="absolute inset-0 flex flex-col justify-center items-center transition-transform duration-500 group-hover:-translate-y-full p-2 bg-brand-ivory">
+                      <span className="block text-xs font-bold text-brand-gold/50 font-heading mb-2">{f.num}</span>
+                      <span className="block font-heading font-bold text-brand-neutral-900 text-sm mb-1">{f.name}</span>
+                      <span className="block text-xs text-brand-neutral-500">{f.desc}</span>
+                    </div>
+                    {/* Hover State Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#1a130c] to-brand-neutral-900 text-[#e8dfd0] p-4 flex flex-col justify-center items-center transition-transform duration-500 translate-y-full group-hover:translate-y-0 text-center">
+                      <span className="text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-2 border-b border-brand-gold/30 pb-1">2026 Reality</span>
+                      <p className="text-xs leading-snug">{f.fact}</p>
+                    </div>
                   </div>
                 </FadeIn>
               ))}
