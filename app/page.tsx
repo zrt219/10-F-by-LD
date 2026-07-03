@@ -154,16 +154,29 @@ export default function Home() {
         </section>
 
         {/* ── CREDIBILITY STRIP ── */}
-        <section className="py-6 bg-[#1a130c] border-y border-brand-gold/30 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <section className="py-5 bg-[#1a130c] border-y border-brand-gold/30 overflow-hidden relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-shrink-0 relative z-10 md:pr-6 md:border-r md:border-brand-gold/30 text-center md:text-left w-full md:w-auto">
               <p className="text-xs font-bold uppercase tracking-widest text-brand-gold">Trusted By</p>
-              <div className="flex flex-wrap justify-center sm:justify-end gap-x-8 gap-y-2 text-[#e8dfd0] text-sm font-semibold">
-                <span>NCAA Programs</span>
-                <span>Canadian National Athletics</span>
-                <span>Youth Sport Organizations</span>
-                <span>University Athletic Departments</span>
-                <span>Elite Coaching Programs</span>
+            </div>
+            
+            {/* Infinite Marquee Container */}
+            <div className="relative flex-1 overflow-hidden w-full mask-image-fade">
+              <div className="flex w-max animate-marquee items-center text-[#e8dfd0] text-sm md:text-base font-semibold uppercase tracking-wider">
+                {[...Array(2)].map((_, i) => (
+                  <div key={i} className="flex items-center space-x-8 sm:space-x-12 px-4 sm:px-6">
+                    <span>NCAA Programs</span>
+                    <span className="text-brand-gold/50 text-xl leading-none">&middot;</span>
+                    <span>Canadian National Athletics</span>
+                    <span className="text-brand-gold/50 text-xl leading-none">&middot;</span>
+                    <span>Youth Sport Organizations</span>
+                    <span className="text-brand-gold/50 text-xl leading-none">&middot;</span>
+                    <span>University Athletic Departments</span>
+                    <span className="text-brand-gold/50 text-xl leading-none">&middot;</span>
+                    <span>Elite Coaching Programs</span>
+                    <span className="text-brand-gold/50 text-xl leading-none">&middot;</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
