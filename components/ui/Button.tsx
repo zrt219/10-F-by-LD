@@ -61,7 +61,7 @@ export function Button({
   }
 
   return (
-    <motion.button className={classes} {...props} {...motionProps}>
+    <motion.button className={classes} {...(props as any)} {...motionProps}>
       {children}
     </motion.button>
   );
