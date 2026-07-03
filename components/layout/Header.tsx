@@ -49,8 +49,31 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center z-50">
-            <Link href="/" className="font-heading font-bold text-2xl tracking-tight text-brand-neutral-900" onClick={() => setIsMobileMenuOpen(false)}>
-              10 F's
+            <Link href="/" className="group flex items-baseline" onClick={() => setIsMobileMenuOpen(false)}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-baseline"
+              >
+                <span className="font-heading font-bold text-2xl md:text-3xl tracking-tight text-brand-neutral-900 transition-colors group-hover:text-brand-gold">10 F's</span>
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: { opacity: 0, width: 0 },
+                    visible: { 
+                      opacity: 1, 
+                      width: "auto",
+                      transition: { duration: 0.8, delay: 0.3, ease: "circOut" }
+                    }
+                  }}
+                  className="overflow-hidden whitespace-nowrap ml-2 hidden sm:block"
+                >
+                  <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-gold-dark shimmer bg-[length:200%_auto]">
+                    by Lornette Daye
+                  </span>
+                </motion.div>
+              </motion.div>
             </Link>
           </div>
 
