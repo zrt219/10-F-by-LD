@@ -69,7 +69,7 @@ export function Header() {
                   }}
                   className="overflow-hidden whitespace-nowrap ml-2 hidden sm:block"
                 >
-                  <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase bg-clip-text text-transparent bg-gradient-to-r from-brand-gold via-brand-gold-light to-brand-gold-dark shimmer bg-[length:200%_auto]">
+                  <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-brand-gold">
                     by Lornette Daye
                   </span>
                 </motion.div>
