@@ -7,8 +7,9 @@ export const digitalProducts: Product[] = [
     description: 'A 30-day devotional covering identity, pressure, discipline, setbacks, confidence, and resilience.',
     bestFor: 'Daily spiritual and mental grounding',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$19.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/14AcN53ZYcjM9eV3TY1VK0d',
   },
   {
     id: '02-motivational-reflections',
@@ -16,8 +17,9 @@ export const digitalProducts: Product[] = [
     description: '30 motivational reflections featuring Coach Lornette’s challenge, action steps, and Finish Strong statements.',
     bestFor: 'Quick daily motivation and mindset shifts',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$14.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/6oUaEXfIGbfIfDj9ei1VK0e',
   },
   {
     id: '03-speak-life-affirmations',
@@ -25,8 +27,9 @@ export const digitalProducts: Product[] = [
     description: '100 athlete affirmations covering identity, confidence, game day pressure, and life beyond sport.',
     bestFor: 'Building unshakeable confidence and focus',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$12.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/fZueVd8ge83w3UBfCG1VK0f',
   },
   {
     id: '04-mental-wellness-reset',
@@ -34,8 +37,9 @@ export const digitalProducts: Product[] = [
     description: 'A 7-day reset plan focusing on emotional check-ins, pressure management, and healthy routines.',
     bestFor: 'Athletes feeling overwhelmed or burned out',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$24.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/9B628rgMKgA22Qx8ae1VK0g',
   },
   {
     id: '05-gratitude-journal',
@@ -43,8 +47,9 @@ export const digitalProducts: Product[] = [
     description: 'A 90-day gratitude journal designed specifically for the unique challenges of student-athletes.',
     bestFor: 'Developing a positive, grounded perspective',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$19.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/9B614n3ZYabEezf4Y21VK0h',
   },
   {
     id: '06-responsible-ai-guide',
@@ -52,8 +57,9 @@ export const digitalProducts: Product[] = [
     description: 'A practical guide on using AI safely for career prep, networking, and studying without violating integrity.',
     bestFor: 'Modern student-athletes navigating AI tools',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$29.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/4gMbJ1gMK97Abn33TY1VK0i',
   },
   {
     id: '07-career-readiness-workbook',
@@ -61,8 +67,9 @@ export const digitalProducts: Product[] = [
     description: 'Translate your athletic discipline into career language. Includes resume examples and interview builders.',
     bestFor: 'Athletes transitioning into the workforce',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$34.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/00w5kD9kibfI0Ipaim1VK0j',
   },
   {
     id: '08-personal-brand-workbook',
@@ -70,8 +77,9 @@ export const digitalProducts: Product[] = [
     description: 'Audit your social media, define your values, and build a professional image for life and NIL deals.',
     bestFor: 'Building a strong, authentic public image',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$29.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/dRm8wPcwudnQ3UBbmq1VK0k',
   },
   {
     id: '09-nil-digital-reputation',
@@ -79,8 +87,9 @@ export const digitalProducts: Product[] = [
     description: 'Understand how online decisions affect future opportunities and learn to navigate NIL safely.',
     bestFor: 'Navigating sponsorships and digital footprint',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$24.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/00wfZheECcjMfDj1LQ1VK0l',
   },
   {
     id: '10-finish-strong-action-planner',
@@ -88,7 +97,8 @@ export const digitalProducts: Product[] = [
     description: 'A structured planner balancing athletic, academic, wellness, and future-building habits every day.',
     bestFor: 'Creating structure and achieving major goals',
     formats: ['PDF', 'Word', 'Kindle'],
-    price: '$29.99',
+    price: '$25.99',
     isAvailable: true,
+    stripeLink: 'https://buy.stripe.com/cNicN5aom0B49eVeyC1VK0m',
   }
 ];

@@ -77,7 +77,11 @@ export default async function ProductDetailPage(props: { params: Promise<{ id: s
                   <span className="font-bold text-3xl text-brand-neutral-900">{product.price}</span>
                 </div>
                 {product.isAvailable ? (
-                  <Button size="lg" className="w-full sm:w-auto shadow-lg">Purchase & Download</Button>
+                  product.stripeLink ? (
+                    <Button href={product.stripeLink} size="lg" className="w-full sm:w-auto shadow-lg">Purchase & Download</Button>
+                  ) : (
+                    <Button size="lg" className="w-full sm:w-auto shadow-lg">Purchase & Download</Button>
+                  )
                 ) : (
                   <Button disabled variant="secondary" size="lg" className="w-full sm:w-auto opacity-70 cursor-not-allowed">Coming Soon</Button>
                 )}

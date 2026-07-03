@@ -13,6 +13,8 @@ if not stripe.api_key or stripe.api_key == "your_stripe_secret_key_here":
     exit(1)
 
 default_price = os.getenv("DEFAULT_PRICE_USD", "97")
+# Clean up any currency symbols or whitespace
+default_price = default_price.replace("$", "").strip()
 try:
     price_cents = int(float(default_price) * 100)
 except ValueError:

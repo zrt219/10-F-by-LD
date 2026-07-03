@@ -12,6 +12,7 @@ export interface Product {
   price: string;
   isAvailable: boolean;
   badge?: string;
+  stripeLink?: string;
 }
 
 const FORMAT_ICONS: Record<string, React.ReactNode> = {
